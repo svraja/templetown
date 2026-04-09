@@ -26,6 +26,7 @@
       padding: 15px;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	  text-align: center;
     }
 
     .title {
@@ -51,6 +52,7 @@
       padding: 10px;
       font-size: 12px;
 	  margin-right: 5px;
+	  text-align: left;
     }
 
     .small {
@@ -144,7 +146,64 @@
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-		.card-link { text-decoration: none; color: inherit; display: block;}	
+		.card-link { text-decoration: none; color: inherit; display: block;}
+
+
+ .slider-box {
+      position: relative;
+      width: 98%;
+      margin-bottom: -20px;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    .left { left: -5px; }
+    .right { right: -5px; }
+
+    .left::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-left: 3px solid black;
+      border-bottom: 3px solid black;
+      transform: rotate(45deg);
+      margin: auto;
+      margin-top: 10px;
+    }
+
+    .right::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-right: 3px solid black;
+      border-top: 3px solid black;
+      transform: rotate(45deg);
+      margin: auto;
+      margin-top: 10px;
+    }
+	.view-btn {
+  display: block;
+  margin: 10px auto;
+  width: fit-content;
+  padding: 10px 10px;
+  border-radius: 5px;
+  background: #ff0000;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+		
   </style>
 </head>
 
@@ -166,14 +225,22 @@
   <!-- Temple 1 -->
   <div class="card">
     <div class="title">
-      Thyagaraja Swami Temple <br>
-      <span class="distance">(2 KM)</span>
+      Vedaranyeswarar Temple <br>
+      <span class="distance">(20 KM)</span>
     </div>
 	
-	<div class="row"> <a href="brahmapureeswarar.html"><img style="width: 301px; height: 214px; border-radius: 17px; border: 0.50px #C9C9C9 solid" src="images/img-01.jpg" /></a></div>
+<!-- Temple Card -->
+	
+		<div class="slider-box">
+		  <div class="arrow left" onclick="move(this,-1)"></div>
+				<img class="slider" src="temple/A01.jpg" width="300"
+			   data-images="temple/A02.jpg,temple/A03.jpg">
+		  <div class="arrow right" onclick="move(this,1)"></div>
+	</div>
+	
+
 
     <div class="row">
-
       <div class="box">
         <b>Temple Timings</b>
         <div class="small">Mor: 6:00 AM – 12:00 PM</div>
@@ -182,23 +249,28 @@
 
       <div class="box">
         <b>Services</b>
-        <div class="small">🍽 Food</div>
-        <div class="small">🛏 Stay</div>
-        <div class="small">🚖 Cab</div>
-        <div class="small">🧭 Guide</div>
+        <div class="small">🍽 Food | 🛏 Stay</div>
+        <div class="small">🚖 Cab | 🧭 Guide</div>
       </div>
     </div>
+	
+		<a href="temple01_vedaranyeswarar.html" class="view-btn">  View More →</a>
   </div>
 
   <!-- Temple 2 -->
   <div class="card">
     <div class="title">
-      Brahmapureeswarar Temple <br>
-      <span class="distance">(2 KM)</span>
+      Thirukkuvalai Thyagaraja Temple <br>
+      <span class="distance">(7 KM)</span>
     </div>
 	
-	<div class="row"> <a href="brahmapureeswarar.html"><img style="width: 301px; height: 214px; border-radius: 17px; border: 0.50px #C9C9C9 solid" src="images/img-01.jpg" /></a></div>
-
+<!-- Temple Card -->
+	<div class="slider-box">
+		  <div class="arrow left" onclick="move(this,-1)"></div>
+				<img class="slider" src="temple/B01.jpg" width="300"
+			   data-images="temple/B02.jpg,temple/B03.jpg">
+		  <div class="arrow right" onclick="move(this,1)"></div>
+	</div>
 
     <div class="row">
       <div class="box">
@@ -209,13 +281,155 @@
 
       <div class="box">
         <b>Services</b>
-        <div class="small">🍽 Food</div>
-        <div class="small">🛏 Stay</div>
-        <div class="small">🚖 Cab</div>
-        <div class="small">🧭 Guide</div>
+        <div class="small">🍽 Food | 🛏 Stay</div>
+        <div class="small">🚖 Cab | 🧭 Guide</div>
       </div>
     </div>
+		<a href="temple01_vedaranyeswarar.html" class="view-btn">  View More →</a>
   </div>
+  
+  <!-- Temple 3 -->
+  <div class="card">
+    <div class="title">
+      Ettukudi Murugan Temple <br>
+      <span class="distance">(12 KM)</span>
+    </div>
+	
+<!-- Temple Card -->
+	<div class="slider-box">
+		  <div class="arrow left" onclick="move(this,-1)"></div>
+				<img class="slider" src="temple/C01.jpg" width="300"
+			   data-images="temple/C02.jpg">
+		  <div class="arrow right" onclick="move(this,1)"></div>
+	</div>
+
+    <div class="row">
+      <div class="box">
+        <b>Temple Timings</b>
+        <div class="small">Mor: 6:00 AM – 12:00 PM</div>
+        <div class="small">Eve: 4:00 PM – 8:30 PM</div>
+      </div>
+
+      <div class="box">
+        <b>Services</b>
+        <div class="small">🍽 Food | 🛏 Stay</div>
+        <div class="small">🚖 Cab | 🧭 Guide</div>
+      </div>
+    </div>
+		<a href="temple01_vedaranyeswarar.html" class="view-btn">  View More →</a>
+  </div>
+ 
+  
+      <!-- Temple 4 -->
+  <div class="card">
+    <div class="title">
+      Kodiyakarai Kuzhagar Temple <br>
+      <span class="distance">(18 KM)</span>
+    </div>
+	
+	
+<!-- Temple Card -->
+	<div class="slider-box">
+		  <div class="arrow left" onclick="move(this,-1)"></div>
+				<img class="slider" src="temple/D01.jpg" width="300"
+			   data-images="temple/D02.jpg,temple/D03.jpg">
+		  <div class="arrow right" onclick="move(this,1)"></div>
+	</div>
+
+    <div class="row">
+      <div class="box">
+        <b>Temple Timings</b>
+        <div class="small">Mor: 6:00 AM – 12:00 PM</div>
+        <div class="small">Eve: 4:00 PM – 8:30 PM</div>
+      </div>
+
+
+      <div class="box">
+        <b>Services</b>
+        <div class="small">🍽 Food | 🛏 Stay</div>
+        <div class="small">🚖 Cab | 🧭 Guide</div>
+      </div>
+    </div>
+		<a href="temple01_vedaranyeswarar.html" class="view-btn">  View More →</a>
+  </div>
+  
+<!-- Temple 5 -->
+  <div class="card">
+    <div class="title">
+      Agastheeswarar Temple Thirukkuvalai <br>
+      <span class="distance">(6 KM)</span>
+    </div>
+	
+<!-- Temple Card -->
+	<div class="slider-box">
+		  <div class="arrow left" onclick="move(this,-1)"></div>
+				<img class="slider" src="temple/F01.jpg" width="300"
+			   data-images="temple/F02.jpg,temple/F03.jpg,temple/F04.jpg">
+		  <div class="arrow right" onclick="move(this,1)"></div>
+	</div>
+
+    <div class="row">
+      <div class="box">
+        <b>Temple Timings</b>
+        <div class="small">Mor: 6:00 AM – 12:00 PM</div>
+        <div class="small">Eve: 4:00 PM – 8:30 PM</div>
+      </div>
+
+      <div class="box">
+        <b>Services</b>
+        <div class="small">🍽 Food | 🛏 Stay</div>
+        <div class="small">🚖 Cab | 🧭 Guide</div>
+      </div>
+    </div>
+		<a href="temple01_vedaranyeswarar.html" class="view-btn">  View More →</a>
+  </div>
+  
+ <!-- Temple 6 -->
+  <div class="card">
+    <div class="title">
+      Soundararaja Perumal Temple Vedaranyam <br>
+      <span class="distance">(15 km)</span>
+    </div>
+	
+<!-- Temple Card -->
+	<div class="slider-box">
+		  <div class="arrow left" onclick="move(this,-1)"></div>
+				<img class="slider" src="temple/E01.jpg" width="300"
+			   data-images="temple/E02.jpg,temple/E03.jpg">
+		  <div class="arrow right" onclick="move(this,1)"></div>
+	</div>
+
+    <div class="row">
+      <div class="box">
+        <b>Temple Timings</b>
+        <div class="small">Mor: 6:00 AM – 12:00 PM</div>
+        <div class="small">Eve: 4:00 PM – 8:30 PM</div>
+      </div>
+
+      <div class="box">
+        <b>Services</b>
+        <div class="small">🍽 Food | 🛏 Stay</div>
+        <div class="small">🚖 Cab | 🧭 Guide</div>
+      </div>
+    </div>
+		<a href="temple01_vedaranyeswarar.html" class="view-btn">  View More →</a>
+  </div>
+  
+  
+<script>
+function move(btn, d){
+  let box = btn.parentElement;
+  let img = box.querySelector(".slider");
+
+  let images = img.dataset.images.split(",");
+  let i = img.dataset.index || 0;
+
+  i = (parseInt(i) + d + images.length) % images.length;
+
+  img.src = images[i];
+  img.dataset.index = i;
+}
+</script>
 
 </body>
 </html>
