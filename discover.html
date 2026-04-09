@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temple Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      padding-top: 80px;
+    }
+
+    .card {
+      background: white;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .title {
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .distance {
+      color: red;
+      font-weight: bold;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    .box {
+      width: 48%;
+      border: 1px solid #ffc4c4;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 12px;
+	  margin-right: 5px;
+    }
+
+    .small {
+      font-size: 11px;
+      color: #555;
+    }
+	
+	/* Slider */
+	.slider {
+	  position: relative;
+	  width: 90%;
+	  margin: 20px auto;
+	  overflow: hidden;
+	  border-radius: 20px;
+	}
+
+	.slides {
+	  display: flex;
+	  transition: transform 0.5s ease-in-out;
+	}
+
+	.slides img {
+	  width: 100%;
+	  flex-shrink: 0;
+	}
+
+	/* Buttons */
+	.btn {
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  background: rgba(0,0,0,0.5);
+	  color: white;
+	  border: none;
+	  padding: 10px;
+	  cursor: pointer;
+	  border-radius: 50%;
+	}
+
+	.prev { left: 10px; }
+	.next { right: 10px; }
+
+	/* Dots */
+	.dots {
+	  text-align: center;
+	  margin-top: 10px;
+	}
+
+	.dot {
+	  height: 8px;
+	  width: 8px;
+	  margin: 5px;
+	  display: inline-block;
+	  background: #ccc;
+	  border-radius: 50%;
+	  cursor: pointer;
+	}
+
+	.active {
+	  background: #333;
+	}
+	
+	.map {
+  position: relative;
+  height: 8`0px;
+}
+
+/* Contact Button */
+.contact-btn {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+/* Home Icon */
+.home-icon {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  background: white;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+		.card-link { text-decoration: none; color: inherit; display: block;}	
+  </style>
+</head>
+
+<body>
+
+<!-- Map -->
+<div class="map">
+
+	<a href="index.html"> <div class="home-icon">🏠</div> </a>
+
+  <div class="contact-btn">
+    <a href="contact_us.html" class="card-link"> 📞 CONTACT US </a>
+  </div>
+
+</div>
+
+  <div class="header">Discover the Divine</div>
+
+  <!-- Temple 1 -->
+  <div class="card">
+    <div class="title">
+      Thyagaraja Swami Temple <br>
+      <span class="distance">(2 KM)</span>
+    </div>
+	
+	<div class="row"> <a href="brahmapureeswarar.html"><img style="width: 301px; height: 214px; border-radius: 17px; border: 0.50px #C9C9C9 solid" src="images/img-01.jpg" /></a></div>
+
+    <div class="row">
+
+      <div class="box">
+        <b>Temple Timings</b>
+        <div class="small">Mor: 6:00 AM – 12:00 PM</div>
+        <div class="small">Eve: 4:00 PM – 8:30 PM</div>
+      </div>
+
+      <div class="box">
+        <b>Services</b>
+        <div class="small">🍽 Food</div>
+        <div class="small">🛏 Stay</div>
+        <div class="small">🚖 Cab</div>
+        <div class="small">🧭 Guide</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Temple 2 -->
+  <div class="card">
+    <div class="title">
+      Brahmapureeswarar Temple <br>
+      <span class="distance">(2 KM)</span>
+    </div>
+	
+	<div class="row"> <a href="brahmapureeswarar.html"><img style="width: 301px; height: 214px; border-radius: 17px; border: 0.50px #C9C9C9 solid" src="images/img-01.jpg" /></a></div>
+
+
+    <div class="row">
+      <div class="box">
+        <b>Temple Timings</b>
+        <div class="small">Mor: 6:00 AM – 12:00 PM</div>
+        <div class="small">Eve: 4:00 PM – 8:30 PM</div>
+      </div>
+
+      <div class="box">
+        <b>Services</b>
+        <div class="small">🍽 Food</div>
+        <div class="small">🛏 Stay</div>
+        <div class="small">🚖 Cab</div>
+        <div class="small">🧭 Guide</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

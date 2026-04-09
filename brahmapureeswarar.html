@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temple Guide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .card {
+      background: white;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .title {
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .distance {
+      color: red;
+      font-weight: bold;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    .box {
+      width: 48%;
+      border: 1px solid #ffc4c4;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 12px;
+	  margin-right: 5px;
+	  text-align: left;
+    }
+
+    .small {
+      font-size: 11px;
+      color: #555;
+    }
+	
+	/* Slider */
+	.slider {
+	  position: relative;
+	  width: 90%;
+	  margin: 20px auto;
+	  overflow: hidden;
+	  border-radius: 20px;
+	}
+
+	.slides {
+	  display: flex;
+	  transition: transform 0.5s ease-in-out;
+	}
+
+	.slides img {
+	  width: 100%;
+	  flex-shrink: 0;
+	}
+
+	/* Buttons */
+	.btn {
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  background: rgba(0,0,0,0.5);
+	  color: white;
+	  border: none;
+	  padding: 10px;
+	  cursor: pointer;
+	  border-radius: 50%;
+	}
+
+	.prev { left: 10px; }
+	.next { right: 10px; }
+
+	/* Dots */
+	.dots {
+	  text-align: center;
+	  margin-top: 10px;
+	}
+
+	.dot {
+	  height: 8px;
+	  width: 8px;
+	  margin: 5px;
+	  display: inline-block;
+	  background: #ccc;
+	  border-radius: 50%;
+	  cursor: pointer;
+	}
+
+	.active {
+	  background: #333;
+	}
+	/* Map Section */
+.map {
+  position: relative;
+  height: 120px;
+}
+
+/* Contact Button */
+.contact-btn {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+/* Home Icon */
+.home-icon {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  background: white;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Card */
+.card {
+  margin-top: -40px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+}
+
+.distance {
+  color: red;
+  font-weight: bold;
+}
+ p {
+      font-size: 12px;
+      line-height: 1.6;
+      color: #333;
+    }
+	 li {
+      margin-bottom: 8px;
+      font-size: 12px;
+	  color: #333;
+	  padding: -10px;
+    }
+	    .continue-btn {
+      width: 96%;
+      padding: 16px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+	  margin: 10px;
+	  background-color: #FF0000;
+	  color: #ffffff;
+	  
+    }
+	.card-link { text-decoration: none; color: inherit; display: block;}
+  </style>
+</head>
+
+<body>
+<!-- Map -->
+<div class="map">
+
+  <a href="discover.html" class="card-link"> <div class="home-icon">🏠</div></a>
+
+  <div class="contact-btn">
+    <a href="contact_us.html" class="card-link"> 📞 CONTACT US </a>
+  </div>
+
+</div>
+
+<!-- Card -->
+  <!-- Temple 1 -->
+  <div class="card">
+    <div class="title">
+      Thyagaraja Swami Temple <br>
+      <span class="distance">(2 KM)</span>
+    </div>
+	
+	<div class="row"><img style="width: 301px; height: 214px; border-radius: 17px; border: 0.50px #C9C9C9 solid" src="images/img-01.jpg" /></div>
+
+    <div class="row">
+      <div class="box">
+        <b>Temple Timings</b>
+        <div class="small">Mor: 6:00 AM – 12:00 PM</div>
+        <div class="small">Eve: 4:00 PM – 8:30 PM</div>
+      </div>
+
+      <div class="box">
+        <b>Services</b>
+        <div class="small">🍽 Food</div>
+        <div class="small">🛏 Stay</div>
+        <div class="small">🚖 Cab</div>
+        <div class="small">🧭 Guide</div>
+      </div>
+    </div>
+	  <!-- Temple 2 -->
+  <br>
+  <div>
+<div class="container">
+    <h3>Brahmapureeswarar Temple</h3>
+
+    <p>
+      Brahmapureeswarar Temple is a famous ancient Shiva temple in Tirupattur, Tamil Nadu.
+    </p>
+
+    <p>
+      According to legend, Lord Brahma, the creator in Hindu mythology, once lost his powers due to a curse. 
+      To regain his strength and wisdom, he worshipped Lord Shiva at this sacred place. 
+      Pleased with his devotion, Lord Shiva forgave Brahma and restored his powers.
+    </p>
+
+    <p>
+      Because Brahma prayed here, the temple became known as 
+      <span class="highlight">Brahmapureeswarar</span> (Shiva who blessed Brahma).
+    </p>
+
+    <p class="highlight">What makes this temple unique:</p>
+
+    <ul>
+      <li>It has a separate shrine for Lord Brahma, which is rare.</li>
+      <li>Devotees believe praying here can improve destiny (vidhi).</li>
+      <li>People visit for blessings in career, marriage, and life progress.</li>
+    </ul>
+
+  </div>
+  </div>
+
+<div class="">
+			<button class="continue-btn">Quick Enquiry<span class="icon"></span></button>	
+		</div>
+
+  </div>
+
+</body>
+</html>
