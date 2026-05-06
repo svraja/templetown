@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sivan Temple – Kachanam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    .header {
+      text-align: center;
+      padding: 0px;
+      font-size: 22px;
+      font-weight: bold;
+      padding-top: 80px;
+    }
+
+    .card {
+      background: white;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	  text-align: center;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .distance {
+      color: red;
+      font-weight: bold;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    .box {
+      width: 48%;
+      border: 1px solid #ffc4c4;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 12px;
+	  margin-right: 5px;
+	  text-align: left;
+    }
+
+    .small {
+      font-size: 11px;
+      color: #555;
+    }
+	
+	/* Slider */
+	.slider {
+	  position: relative;
+	  width: 90%;
+	  margin: 20px auto;
+	  overflow: hidden;
+	  border-radius: 2px;
+	}
+
+	.slides {
+	  display: flex;
+	  transition: transform 0.5s ease-in-out;
+	}
+
+	.slides img {
+	  width: 100%;
+	  flex-shrink: 0;
+	}
+
+	/* Buttons */
+	.btn {
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  background: rgba(0,0,0,0.5);
+	  color: white;
+	  border: none;
+	  padding: 10px;
+	  cursor: pointer;
+	  border-radius: 50%;
+	}
+
+	.prev { left: 10px; }
+	.next { right: 10px; }
+
+	/* Dots */
+	.dots {
+	  text-align: center;
+	  margin-top: 10px;
+	}
+
+	.dot {
+	  height: 8px;
+	  width: 8px;
+	  margin: 5px;
+	  display: inline-block;
+	  background: #ccc;
+	  border-radius: 50%;
+	  cursor: pointer;
+	}
+
+	.active {
+	  background: #333;
+	}
+	
+	.map {
+  position: relative;
+  height: 8`0px;
+}
+
+/* Contact Button */
+.contact-btn {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+/* Home Icon */
+.home-icon {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  background: ##ff0047;
+  padding: 2px;
+  border-radius: 25%;
+   border: 1px solid #edcbcb;
+   width: 25px;
+  height: 25px;
+}
+		.card-link { text-decoration: none; color: inherit; display: block;}
+
+
+ .slider-box {
+      position: relative;
+      width: 100%;
+      margin-bottom: -20px;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    .left { left: -5px; }
+    .right { right: -5px; }
+
+    .left::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-left: 3px solid black;
+      border-bottom: 3px solid black;
+      transform: rotate(45deg);
+      margin: auto;
+      margin-top: 10px;
+    }
+
+    .right::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-right: 3px solid black;
+      border-top: 3px solid black;
+      transform: rotate(45deg);
+      margin: auto;
+      margin-top: 10px;
+    }
+	.view-btn {
+  display: block;
+  margin: 10px auto;
+  width: fit-content;
+  padding: 10px 10px;
+  border-radius: 5px;
+  background: #ff0000;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+        h1 {
+            font-size: 14px;
+            margin-bottom: 5px;
+			text-align: center;
+        }
+
+        h3 {
+            font-size: 12px;
+            color: gray;
+            margin-top: 0;
+			text-align: center;
+        }
+
+        h2 {
+            margin-top: 12px;
+			font-size: 14px;
+            color: #222;
+			text-align: center;
+        }
+
+        p {
+            margin-bottom: 10px;
+			font-size: 11px;
+			text-align: left;
+        }
+
+        ul {
+            padding-left: 12px;
+			font-size: 11px;
+			text-align: left;
+        }
+
+        li {
+            margin-bottom: 5px;
+			text-align: left;
+        }
+
+        hr {
+            margin: 20px 0;
+			text-align: left;
+        }
+		
+  </style>
+</head>
+
+<body>
+
+<!-- Map -->
+<div class="map">
+
+	<a href="discover.html"> <div class="home-icon"> <img src="images/arrow_back.png" alt="Back" width="24" height="24"> </div> </a>
+
+  <div class="contact-btn">
+    <a href="contact_us.html" class="card-link"> 📞 CONTACT US </a>
+  </div>
+
+</div>
+
+  <div class="header">Sivan Temple – Kachanam<br> <span class="distance">(14 KM)</span></div>
+
+  <!-- Temple 1 -->
+  <div class="card">
+	
+<!-- Temple Card -->
+	
+	<div class="slider-box">
+		  <div class="arrow left" onclick="move(this,-1)"></div> 
+				<img class="slider" src="temple/17_01.jpg" width="300"
+			   data-images="temple/17_01.jpg,temple/17_02.jpg,temple/17_03.jpg">
+		  <div class="arrow right" onclick="move(this,1)"></div>
+	</div>
+	
+
+
+    <div class="row">
+      <div class="box">
+        <b>Temple Timings</b>
+        <div class="small">Mor: 6:00 AM – 12:00 PM</div>
+        <div class="small">Eve: 4:00 PM – 8:30 PM</div>
+      </div>
+
+      <div class="box">
+        <b>Services</b>
+        <div class="small">🍽 Food | 🛏 Stay</div>
+        <div class="small">🚖 Cab | 🧭 Guide</div>
+      </div>
+    </div>
+	
+	
+	<!-- Content -->
+
+    <hr>
+
+    <h2>📜 History</h2>
+        <ul>
+			<li>The Sivan temple at Kachanam is known as Sri Kachabeswarar Temple, dedicated to Lord Shiva.</li>
+			<li>Located in the Cauvery delta region near Tiruvarur, it is part of the ancient Chola temple heritage.</li>
+			<li>The name “Kachabeswarar” comes from “Kachaba” (tortoise) — linked to a legend where Kurma Avatar (an incarnation of Vishnu) worshipped Lord Shiva here.</li>
+			<li>This gives the temple a unique Shaiva–Vaishnava connection.</li>
+		</ul>
+
+
+    <h2>🔱 Historical background</h2>
+        <ul>
+			<li>The temple is believed to have been developed during the Chola period, when temple construction flourished in Tamil Nadu.</li>
+			<li>According to legend, Vishnu in Kurma (tortoise) form prayed here to gain divine strength and blessings.</li>
+			<li>Over centuries, the temple evolved from a simple shrine into a structured stone temple supported by local devotees.</li>
+		</ul>
+		
+    <h2>🏛️ Architecture</h2>
+        <ul>
+			<li>🛕 Entrance tower (gopuram) with classic design</li>
+			<li>🪨 Garbhagriha (sanctum) with Shiva Lingam (Kachabeswarar</li>
+			<li>🌺 Shrine for Periyanayaki Amman (Goddess)</li>
+			<li>🧱 Prakaram (corridors) for circumambulation</li>
+		</ul>
+	
+    <h2>🙏 Cultural significance</h2>
+	     <ul>
+			<li>Stability and balance in life</li>
+			<li>Relief from problems and obstacles</li>
+		</ul>
+		
+  </div>
+
+ 
+  
+  
+<script>
+function move(btn, d){
+  let box = btn.parentElement;
+  let img = box.querySelector(".slider");
+
+  let images = img.dataset.images.split(",");
+  let i = img.dataset.index || 0;
+
+  i = (parseInt(i) + d + images.length) % images.length;
+
+  img.src = images[i];
+  img.dataset.index = i;
+}
+</script>
+
+</body>
+</html>
